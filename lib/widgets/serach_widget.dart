@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class SerachWidget extends StatelessWidget {
@@ -14,16 +13,16 @@ class SerachWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height / 16,
+      height: height,
       decoration: BoxDecoration(
-          color: Colors.grey,
-          borderRadius: BorderRadius.circular(6)),
+          color: Colors.grey, borderRadius: BorderRadius.circular(6)),
       child: TextField(
         controller: searchController,
         decoration: const InputDecoration(
             prefixIcon: Icon(Icons.search),
             border: InputBorder.none,
             hintText: "Search"),
+          
       ),
     );
   }

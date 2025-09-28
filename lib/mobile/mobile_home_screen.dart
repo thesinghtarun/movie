@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/lower_listview_widget.dart';
-import 'widgets/serach_widget.dart';
-import 'widgets/upper_slider_widget.dart';
+import '../widgets/listview_mobile_tab_widget.dart';
+import '../widgets/serach_widget.dart';
+import '../widgets/carousel_slider_widegt.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class MobileHomeScreen extends StatelessWidget {
+  const MobileHomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +20,15 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               //Search box
-              SerachWidget(height: height, searchController: searchController),
+              SerachWidget(
+                  height: height / 16, searchController: searchController),
               const SizedBox(
                 height: 10,
               ),
               //Carousel slider
-              UpperSliderWidget(height: height),
+              CarouselSliderWidget(
+                height: height * .45,
+              ),
               //
               const SizedBox(
                 height: 10,
@@ -41,7 +44,10 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               //lower list view(horizontal)
-              LowerListViewWidget(width: width)
+              ListViewMobileAndTabWidget(
+                width: width * .4,
+                screenWidth: width,
+              )
             ],
           ),
         ),
