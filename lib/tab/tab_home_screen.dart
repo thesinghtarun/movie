@@ -3,9 +3,14 @@ import 'package:moviefinder/widgets/listview_mobile_tab_widget.dart';
 import 'package:moviefinder/widgets/serach_widget.dart';
 import 'package:moviefinder/widgets/carousel_slider_widegt.dart';
 
-class TabHomeScreen extends StatelessWidget {
+class TabHomeScreen extends StatefulWidget {
   const TabHomeScreen({super.key});
 
+  @override
+  State<TabHomeScreen> createState() => _TabHomeScreenState();
+}
+
+class _TabHomeScreenState extends State<TabHomeScreen> {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -19,7 +24,7 @@ class TabHomeScreen extends StatelessWidget {
         child: Column(
           children: [
             SerachWidget(
-              height: height * .13,
+              height: height * .06,
               searchController: searchController,
             ),
             const SizedBox(height: 10),

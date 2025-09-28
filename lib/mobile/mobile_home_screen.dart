@@ -36,7 +36,7 @@ class MobileHomeScreen extends StatelessWidget {
               const Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Featured Today",
+                  "Now Playing",
                   style: TextStyle(
                       color: Colors.red,
                       fontWeight: FontWeight.bold,

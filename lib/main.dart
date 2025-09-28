@@ -3,7 +3,9 @@ import 'package:moviefinder/controller/app_controller.dart';
 import 'package:moviefinder/home_page.dart';
 import 'package:provider/provider.dart';
 
-void main() => runApp(const MyApp());
+Future<void> main() async {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
