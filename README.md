@@ -18,3 +18,6 @@ The Movie Finder is a responsive cross platform application where you can search
 
 ## Api
 -I have used tmdb's api in order to get popular, now-playing movies as well as to search movie.
+
+## Disclaimer
+-The movie trailers featured in this application are sourced from YouTube. Full credit for the content belongs to the respective video publishers and to YouTube.

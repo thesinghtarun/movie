@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 
 class AppController extends ChangeNotifier {
   final baseUrlPopularMovies = "https://api.themoviedb.org/3/movie/popular";
@@ -51,5 +52,16 @@ class AppController extends ChangeNotifier {
       print("dataResponseSearch: ${serachedMoviesData[2]["original_title"]}");
       notifyListeners();
     }
+  }
+
+  //to player trailer on youtube
+  Future<void> urlLauncher(String moviename) async {
+    String url =
+        "https://www.youtube.com/results?search_query=$moviename+trailer";
+    final Uri uri = Uri.parse(url);
+    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+      print('Could not launch $url');
+    }
+    notifyListeners();
   }
 }

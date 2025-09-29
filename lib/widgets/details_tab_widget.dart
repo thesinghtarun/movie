@@ -1,5 +1,6 @@
-
 import 'package:flutter/material.dart';
+import 'package:moviefinder/controller/app_controller.dart';
+import 'package:provider/provider.dart';
 
 class DetailsTabWidget extends StatelessWidget {
   const DetailsTabWidget({
@@ -88,31 +89,36 @@ class DetailsTabWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                width: width,
-                height: 46,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10)),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.play_arrow,
-                      color: Colors.black,
-                      size: 28,
+              Consumer<AppController>(
+                builder: (context, value, child) => InkWell(
+                  onTap: () => value.urlLauncher(title),
+                  child: Container(
+                    width: width,
+                    height: 46,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.play_arrow,
+                          color: Colors.black,
+                          size: 28,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "Play",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        )
+                      ],
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "Play",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                    )
-                  ],
+                  ),
                 ),
-              ),
+              )
             ],
           ),
         )

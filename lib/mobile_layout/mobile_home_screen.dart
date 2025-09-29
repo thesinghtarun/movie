@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moviefinder/controller/app_controller.dart';
-import 'package:provider/provider.dart';
 
 import '../widgets/listview_mobile_tab_widget.dart';
 import '../widgets/serach_widget.dart';
