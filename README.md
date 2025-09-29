@@ -15,6 +15,7 @@ The Movie Finder is a responsive cross platform application where you can search
 -To make slider:- Carousel_slider
 -To call tmdb api:- Http
 -To show loading effect:- Shimmer
+-To launch youtube trailer:-url_launcher
 
 ## Api
 -I have used tmdb's api in order to get popular, now-playing movies as well as to search movie.
