@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:moviefinder/mobile/mobile_home_screen.dart';
-import 'package:moviefinder/tab/tab_home_screen.dart';
+import 'package:moviefinder/mobile_layout/mobile_home_screen.dart';
+import 'package:moviefinder/tab_layout/tab_home_screen.dart';
 
 class ResponsiveLayout extends StatelessWidget {
   final Widget mobileLayout;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/details_mobile_widget.dart';
-import 'widgets/details_tab_widget.dart';
+import '../widgets/details_mobile_widget.dart';
+import '../widgets/details_tab_widget.dart';
 
 class DeatilsPage extends StatelessWidget {
   const DeatilsPage({

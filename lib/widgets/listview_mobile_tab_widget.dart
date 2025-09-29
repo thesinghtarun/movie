@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moviefinder/details_page.dart';
+import 'package:moviefinder/pages/details_page.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:moviefinder/controller/app_controller.dart';

@@ -3,13 +3,14 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class AppController extends ChangeNotifier {
   final baseUrlPopularMovies = "https://api.themoviedb.org/3/movie/popular";
   final baseUrlNowPlaying = "https://api.themoviedb.org/3/movie/now_playing";
   final baseSearchMovie = "https://api.themoviedb.org/3/search/movie";
-  final api = "8d06e8645d31b61bdb9e5d785557a580";
+  final api = dotenv.env['API_KEY'];
 
   //to get all popular movie
   var popularMoviesdata;

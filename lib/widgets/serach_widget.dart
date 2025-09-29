@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:moviefinder/controller/app_controller.dart';
 import 'package:provider/provider.dart';
 
-import '../details_page.dart';
+import '../pages/details_page.dart';
 
 class SerachWidget extends StatelessWidget {
   const SerachWidget({

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:moviefinder/controller/app_controller.dart';
-import 'package:moviefinder/home_page.dart';
+import 'package:moviefinder/pages/home_page.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 
